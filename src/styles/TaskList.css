@@ -1,46 +1,53 @@
 .task-list {
-    display: flex;
-    flex-direction: column;
-    width: 320px;
-    border: 1px solid #F2F2F4;
-    border-radius: 10px;
-    padding: 10px;
-    height: fit-content;
-    background-color: #FEFEFF;
-  }
-  
-  .task {
-    border: 1px solid #F2F2F4;
-    border-radius: 10px;
-    align-items: center;
-    padding: 10px;
-    margin: 10px;
-    width: 282px;
-  }
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  border: 1px solid #F2F2F4;
+  border-radius: 10px;
+  padding: 10px;
+  height: fit-content;
+  background-color: #FEFEFF;
+  flex: 1 1 auto;
+}
 
-  .progsec{
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .progress {
-    display: flex;
-    align-items: center;
-  }
-  
-  .progress-bar {
-    height: 10px;
-    background-color: #4CAF50;
-    border-radius: 5px;
-  }
-  
-  .more-button {
-    background-color: transparent;
-    border: none;
-    font-size: 16px;
-    cursor: pointer;
-  }
+.task {
+  border: 1px solid #F2F2F4;
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  width: 282px;
+}
+.progsec {
+  display: flex;
+  justify-content: space-between;
+}
 
-  .create-button{
-    color: #5E20B3;
+.progress {
+  display: flex;
+  align-items: center;
+}
+
+.progress-bar {
+  height: 10px;
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
+
+.more-button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.create-button {
+  color: #5E20B3;
+}
+
+@media (max-width: 768px) {
+  .task-list {
+      width: 100%;
+      padding: 10px;
   }
+}
