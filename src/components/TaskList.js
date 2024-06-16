@@ -11,7 +11,7 @@ function TaskList({ data }) {
       {data.task.length > 0 ? (
         data.task.map((task, index) => (
           <div key={index} className="task">
-            <p className="pl-1 font-semibold gray-litebold text-sm">
+            <p className="pl-1 pb-4 font-semibold gray-litebold text-sm">
               {task.title}
             </p>
             <div className="progsec">
