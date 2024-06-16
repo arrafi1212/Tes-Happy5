@@ -8,7 +8,7 @@ import card4 from "./data/card4.json";
 
 function App() {
   return (
-    <div className="App flex">
+    <div className="App flex font-sans">
       <Navbar />
       <div className="w-full p-10">
         <h1 className="font-semibold text-2xl mb-4">Product Roadmap</h1>
