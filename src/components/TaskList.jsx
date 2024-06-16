@@ -4,13 +4,15 @@ import "../styles/TaskList.css";
 function TaskList({ data }) {
   return (
     <div className="task-list">
-      <h2 className="pl-1 font-light text-xs mb-1">Q1 2019</h2>
+      <h2 className="pl-1 font-light text-xs mb-1">{data.quarter}</h2>
       <h3 className="pl-1 font-semibold text-gray-semibold text-sm">
-        January - March
+        {data.month}
       </h3>
-          <div className="task">
+      {data.task.length > 0 ? (
+        data.task.map((task, index) => (
+          <div key={index} className="task">
             <p className="pl-1 font-semibold gray-litebold text-sm">
-            Re-design the zero-g doggie bags. No more spills!
+              {task.title}
             </p>
             <div className="progsec">
               <div className="progress">
@@ -28,7 +30,7 @@ function TaskList({ data }) {
                   />
                 </svg>
                 <span className="pl-2 text-gray-500 text-xs">
-                64%
+                  {task.progress}
                 </span>
               </div>
               <button className="more-button text-gray-500">
@@ -68,6 +70,12 @@ function TaskList({ data }) {
               </button>
             </div>
           </div>
+        ))
+      ) : (
+        <p className="text-gray-200 pl-1 mt-4 mb-2 text-sm">
+          No Task Available
+        </p>
+      )}
       <div className="flex leading-3">
         <button className="create-button pl-2">+</button>
         <p className="pl-2 text-sm text-gray-litebold">Create new task</p>
