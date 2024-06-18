@@ -11,7 +11,9 @@ function App() {
     <div className="App flex font-sans">
       <Navbar />
       <div className=" p-10">
-        <h1 className="font-semibold text-2xl mb-4">Product Roadmap</h1>
+        <h1 className="font-semibold text-2xl text-gray-2bold mb-4">
+          Product Roadmap
+        </h1>
         <div className="List-task flex gap-4">
           <TaskList data={card1} />
           <TaskList data={card2} />

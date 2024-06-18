@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FiMoreVertical } from "react-icons/fi";
 import "../styles/TaskList.css";
 
 function TaskList({ data }) {
@@ -18,7 +17,9 @@ function TaskList({ data }) {
 
   return (
     <div className="task-list w-full md:w-1/4 ">
-      <h2 className="pl-1 font-light text-xs mb-1">{data.quarter}</h2>
+      <h2 className="pl-1 font-light text-xs text-gray-semibold mb-1">
+        {data.quarter}
+      </h2>
       <h3 className="pl-1 font-semibold text-gray-semibold text-sm">
         {data.month}
       </h3>
@@ -26,10 +27,10 @@ function TaskList({ data }) {
         tasks.map((task, index) => (
           <div key={index} className="task-container">
             <div className="task">
-              <p className="pl-1 pb-4 font-semibold gray-litebold text-sm">
+              <p className="pl-1 pb-4 font-semibold text-gray-2bold text-sm">
                 {task.title}
               </p>
-              <div className="progsec flex items-center">
+              <div className="progsec flex items-center justify-between">
                 <div className="progress flex-1">
                   <svg
                     className="pl-1"
@@ -89,10 +90,10 @@ function TaskList({ data }) {
               </div>
             </div>
             {activeTaskIndex === index && (
-              <div className="menu bg-gray-100 rounded-lg mt-2 ml-3">
+              <div className="menu bg-gray-100 rounded-2xl m-3">
                 <button
                   onClick={() => handleDelete(index)}
-                  className="px-4 py-2 text-left hover:bg-gray-200 text-red-600 text-base"
+                  className="px-4 py-2 text-left text-red-600 text-base hover:bg-gray-300"
                 >
                   Delete
                 </button>
@@ -107,7 +108,7 @@ function TaskList({ data }) {
       )}
       <div className="flex leading-3">
         <button className="create-button pl-2">+</button>
-        <p className="pl-2 text-sm text-gray-litebold">Create new task</p>
+        <p className="pl-2 text-sm text-gray-2bold">Create new task</p>
       </div>
     </div>
   );
