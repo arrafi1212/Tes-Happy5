@@ -3,7 +3,7 @@ import "../styles/Navbar.css";
 
 const Navbar = () => {
   return (
-    <div className="nav-head">
+    <div className="nav-head relative min-h-screen p-5 bg-purple-bg ">
       <div className="logo">
         <svg
           width="28"

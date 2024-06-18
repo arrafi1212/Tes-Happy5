@@ -17,7 +17,7 @@ function TaskList({ data }) {
   };
 
   return (
-    <div className="task-list">
+    <div className="task-list w-full md:w-1/4 ">
       <h2 className="pl-1 font-light text-xs mb-1">{data.quarter}</h2>
       <h3 className="pl-1 font-semibold text-gray-semibold text-sm">
         {data.month}

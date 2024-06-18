@@ -1,7 +1,6 @@
 .task-list {
   display: flex;
   flex-direction: column;
-  width: 320px;
   border: 1px solid #F2F2F4;
   border-radius: 10px;
   padding: 10px;
@@ -16,7 +15,6 @@
   align-items: center;
   padding: 10px;
   margin: 10px;
-  width: 282px;
 }
 .progsec {
   display: flex;
